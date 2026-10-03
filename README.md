@@ -10,15 +10,16 @@ fictícios (`js/data.js`).
 
 ```
 jukeboxd/
-├── index.html          Início — hero, feed de atividades, recomendações
-├── login.html           Login
-├── register.html        Cadastro
-├── search.html           Pesquisa de músicas, álbuns, artistas, usuários, listas
-├── album.html             Detalhe de álbum/música — faixas, avaliação, resenhas
-├── profile.html            Perfil — diário, resenhas, favoritos, listas
-├── lists.html                Listas da comunidade
-├── list-detail.html           Detalhe de uma lista
-├── stats.html                  Estatísticas pessoais / retrospecto anual
+├── html/
+│   ├── index.html      Início — hero, feed de atividades, recomendações
+│   ├── login.html      Login
+│   ├── register.html   Cadastro
+│   ├── search.html     Pesquisa de músicas, álbuns, artistas, usuários, listas
+│   ├── album.html      Detalhe de álbum/música — faixas, avaliação, resenhas
+│   ├── profile.html    Perfil — diário, resenhas, favoritos, listas
+│   ├── lists.html      Listas da comunidade
+│   ├── list-detail.html Detalhe de uma lista
+│   └── stats.html      Estatísticas pessoais / retrospecto anual
 ├── css/
 │   ├── main.css          Design tokens, reset, nav, botões, forms, cards
 │   └── pages.css         Layout específico de cada página
@@ -55,7 +56,7 @@ exemplo:
 ```bash
 cd jukeboxd
 python3 -m http.server 8000
-# abrir http://localhost:8000
+# abrir http://localhost:8000/html/
 ```
 
 ## Conectando ao back-end (Phoenix/Elixir)
