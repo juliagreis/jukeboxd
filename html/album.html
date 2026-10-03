@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="page-title">Álbum — Jukeboxd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav__brand" href="index.html"><span class="vinyl"></span> Jukeboxd</a>
+    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1h18M0 7h18M0 13h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="search.html">Buscar</a>
+      <a href="lists.html">Listas</a>
+      <a href="stats.html">Estatísticas</a>
+    </nav>
+    <form class="nav__search" role="search" action="search.html">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor"/><path d="M11 11l3 3" stroke="currentColor" stroke-linecap="round"/></svg>
+      <input type="search" name="q" placeholder="Buscar músicas, álbuns, artistas…" aria-label="Buscar">
+    </form>
+    <div class="nav__actions">
+      <a class="nav__avatar" href="profile.html" aria-label="Meu perfil" data-current-user-initial>M</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <section class="detail-head" id="detail-head"><!-- preenchido via JS --></section>
+
+    <div class="two-col" style="margin-top:44px">
+      <div>
+        <section aria-labelledby="tracks-heading">
+          <div class="section-head"><h2 id="tracks-heading" style="font-size:1.2rem">Faixas</h2></div>
+          <ol class="tracklist" id="tracklist"></ol>
+        </section>
+
+        <section aria-labelledby="reviews-heading" style="margin-top:46px">
+          <div class="section-head"><h2 id="reviews-heading">Resenhas</h2></div>
+
+          <form class="review-form" id="review-form">
+            <div class="field">
+              <label for="review-body">Escreva sua resenha</label>
+              <textarea id="review-body" placeholder="O que você achou desse álbum?"></textarea>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+              <div class="rate-box"><span class="rate-box__label">Sua nota:</span><span id="review-rating-input"></span></div>
+              <button class="btn btn--primary" type="submit">Publicar resenha</button>
+            </div>
+          </form>
+
+          <div id="reviews-list"></div>
+        </section>
+      </div>
+
+      <aside class="side-panel">
+        <div class="card" style="padding:22px">
+          <h3 style="font-size:1rem;margin-bottom:14px">Mais de <span id="side-artist-name"></span></h3>
+          <div class="grid-albums" id="more-from-artist" style="grid-template-columns:repeat(3,1fr)"></div>
+        </div>
+        <div class="card" style="padding:22px">
+          <h3 style="font-size:1rem;margin-bottom:14px">Quem também ouviu</h3>
+          <ul class="mini-list" id="also-heard"></ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Jukeboxd. Catálogo musical via MusicBrainz.</span>
+    <nav aria-label="Links do rodapé">
+      <a href="index.html">Início</a>
+      <a href="lists.html">Listas</a>
+      <a href="stats.html">Estatísticas</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/album.js"></script>
+</body>
+</html>
